@@ -1,0 +1,45 @@
+.nav-item{
+    margin:0 10px;
+}
+.btn-shadow
+{
+    padding: 8px 30px !important;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+
+}
+
+.navbar{
+    background: #992B41 !important;
+}
+
+.primary-color{
+    color:  #992B41;
+}
+
+.nav-link{
+    color: white  !important;
+}
+
+#intro .container1{
+    
+    padding: 0 40px;
+}
+
+#intro .container1 p{
+    color: #575166;
+    font-size: 21px;
+    font-weight: 300px;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+#carousel{
+    margin-top: 75px;
+}
+/* @media(max-width:992px){
+    .btn-shadow{
+        width: 40%;
+    }
+    
+} */
