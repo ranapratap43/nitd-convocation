@@ -45,13 +45,24 @@
     position:relative;
     height:0;
     }
-    .map-container-5 iframe{
+.map-container-5 iframe{
     left:0;
     top:0;
     height:100%;
     width:100%;
     position:absolute;
     }
+
+.footer-bottom{
+    background:#992B41 !important;
+    color: white;
+}
+.footer-bottom a{
+    color: white;
+}
+.footer-copyright{
+    background: #65001b;
+}
 /* @media(max-width:992px){
     .btn-shadow{
         width: 40%;
