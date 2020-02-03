@@ -53,11 +53,11 @@
  
   <section>
     <div class="container pt-5">
-      <h2 class="text-center primary-color font-weight-bolder">Registraion Form</h2>
+      <h2 class="text-center primary-color font-weight-bolder">Registration Form</h2>
    </div>
    <div class="container shadow p-4 mb-4 bg-white text-left">
     <form id = "contactForm">
-      
+      <p class="text-left highlight_text">* All Fields are COMPULSORY.</p>
       <h4 class="primary-color font-weight-bolder mt-3">Personal Details</h4>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -106,6 +106,7 @@
         <div class="form-group col-md-6">
           <label for="gender">Gender</label>
           <select id="gender" class="form-control"required>
+            <option hidden disabled selected>Select</option>
             <option>Male</option>
             <option>Female</option>
             <option>Others</option>
@@ -121,6 +122,7 @@
         <div class="form-group col-md-4">
           <label for="department">Department</label>
           <select id="department" class="form-control"required>
+            <option hidden disabled selected>Select</option>
             <option>CSE</option>
             <option>ECE</option>
             <option>EEE</option>
@@ -131,6 +133,7 @@
         <div class="form-group col-md-4">
           <label for="program">Program</label>
           <select id="program" class="form-control"required>
+            <option hidden disabled selected>Select</option>
             <option>B.Tech.</option>
             <option>M.Tech.</option>
             <option>Ph.D.</option>
@@ -140,6 +143,7 @@
         <div class="form-group col-md-4">
           <label for="category">Category</label>
           <select id="category" class="form-control"required>
+            <option hidden disabled selected>Select</option>
             <option>Gen</option>
             <option>SC</option>
             <option>ST</option>
@@ -150,11 +154,13 @@
       </div>
       
       <h4 class="primary-color font-weight-bolder mt-3">Accompanying Persons</h4>
+      <p class="text-left highlight_text">* Details of Accompanying persons should be CORRECT, and NO MODIFICATION will be further entertained.</p>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="no_accompanying">No. of Accompanying Person</label>
           <select id="no_accompanying" class="form-control " aria-describedby="passwordHelpInline"required>
+            <option hidden disabled selected>Select</option>
             <option>Nil</option>
             <option>1</option>
             <option>2</option>
@@ -165,25 +171,25 @@
         </div>
       </div>
 
-      <div class="form-row" id = "acoompanying1">
+      <div class="form-row" id = "accompany1">
         <div class="form-group col-md-6">
           <label for="name_accompanying1">Name of Person 1</label>
-          <input type="text" class="form-control" id="name_accompanying1">
+          <input type="text" class="form-control" id="name_accompanying1" >
         </div>
         <div class="form-group col-md-6">
           <label for="age_accompanying1">Age of Person 1</label>
-          <input type="text" class="form-control" id="age_accompanying1">
+          <input type="number" class="form-control" id="age_accompanying1" min="15" >
         </div>
       </div>
 
-      <div class="form-row" id = "acoompanying2">
+      <div class="form-row" id = "accompany2">
         <div class="form-group col-md-6">
           <label for="name_accompanying2">Name of Person 2</label>
-          <input type="text" class="form-control" id="name_accompanying2">
+          <input type="text" class="form-control" id="name_accompanying2" >
         </div>
         <div class="form-group col-md-6">
           <label for="age_accompanying2">Age of Person 2</label>
-          <input type="text" class="form-control" id="age_accompanying2">
+          <input type="number" class="form-control" id="age_accompanying2" min = "15">
         </div>
       </div>
 
@@ -193,6 +199,7 @@
         <div class="form-group col-md-6">
           <label for="transaction_mode">Transaction Mode</label>
           <select id="transaction_mode" class="form-control "required>
+            <option hidden disabled selected>Select</option>
             <option>Net Banking</option>
             <option>UPI</option>
             
@@ -211,7 +218,7 @@
         </div>
         <div class="form-group col-md-6">
           <label for="transaction_date">Transaction Date</label>
-          <input type="text" class="form-control" id="transaction_date"required>
+          <input type="date" class="form-control" id="transaction_date"required>
         </div>
       </div>
         

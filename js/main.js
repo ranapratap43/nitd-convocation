@@ -44,6 +44,34 @@ document.getElementById('name_hin_file').addEventListener('change', function(evt
   
 });
 
+document.getElementById('no_accompanying').addEventListener('change', function(evt){
+  var e =  document.getElementById('no_accompanying');
+  var response = e.options[e.selectedIndex].text;
+  if(response == "Nil"){
+    document.querySelector('#accompany1').style.display = 'none';
+    document.querySelector('#accompany2').style.display = 'none';
+    document.getElementById("name_accompanying1").required = false;
+    document.getElementById("age_accompanying1").required = false;
+    document.getElementById("name_accompanying2").required = false;
+    document.getElementById("age_accompanying2").required = false;
+
+  }else if(response == "1"){
+    document.querySelector('#accompany1').style.display = 'block';
+    document.querySelector('#accompany2').style.display = 'none';
+    document.getElementById("name_accompanying1").required = true;
+    document.getElementById("age_accompanying1").required = true;
+    document.getElementById("name_accompanying2").required = false;
+    document.getElementById("age_accompanying2").required = false;
+  }else if(response == "2"){
+    document.querySelector('#accompany1').style.display = 'block';
+    document.querySelector('#accompany2').style.display = 'block';
+    document.getElementById("name_accompanying1").required = true;
+    document.getElementById("age_accompanying1").required = true;
+    document.getElementById("name_accompanying2").required = true;
+    document.getElementById("age_accompanying2").required = true;
+  }
+  console.log(response);
+});
 function submitForm(e){
     e.preventDefault();
 
@@ -69,17 +97,21 @@ function submitForm(e){
     var bank_name = getInputVal('bank_name');
     var transaction_id = getInputVal('transaction_id');
     var transaction_date = getInputVal('transaction_date');
-    var file = file_hin
+    var file = file_hin;
     
 
 
 
-
-    console.log(roll + " " + name_eng + " " + name_hin + " " + dob );
-    //save message
-    saveData(roll, name_eng, name_hin, dob, name_father, email, phone, gender, nationality, department, program, category, no_accompanying, 
-      name_accompanying1, age_accompanying1, name_accompanying2, age_accompanying2, transaction_mode, bank_name, transaction_id, transaction_date, file);
+    if(gender != "Select"&& department != "Select" && program != "Select" && category != "Select" && no_accompanying != "Select"&& transaction_mode != "Select"){
+      console.log(roll + " " + name_eng + " " + name_hin + " " + dob );
+      //save message
+      saveData(roll, name_eng, name_hin, dob, name_father, email, phone, gender, nationality, department, program, category, no_accompanying, 
+        name_accompanying1, age_accompanying1, name_accompanying2, age_accompanying2, transaction_mode, bank_name, transaction_id, transaction_date, file);
+    } else{
+      showAlert("Please  Choose Valid Option in Dropdown.");
+   
     
+    }
 }
 function getOptionVal(id){
   var e = document.getElementById(id);
