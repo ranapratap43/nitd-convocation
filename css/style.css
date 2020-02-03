@@ -91,3 +91,19 @@ main {
     }
     
 } */
+/* Forms*/
+
+  .alert{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background: #992B41;
+    margin-bottom: 10px;
+    display: none;
+  }
+  
+ .highlight_text{
+     color: red;
+ }
+
+
