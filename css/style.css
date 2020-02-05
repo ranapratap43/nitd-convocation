@@ -22,12 +22,9 @@
     color: white  !important;
 }
 
-#intro .container1{
-    
-    padding: 0 40px;
-}
 
-#intro .container1 p{
+
+.intro {
     color: #575166;
     font-size: 21px;
     font-weight: 300px;
@@ -108,4 +105,52 @@ main {
 
 #accompany1, #accompany2{
     display: none;
+}
+
+
+
+.guest{
+    background-image: linear-gradient(to right, #FF0099, #493240);
+}
+
+.guidelines .smooth a{
+    color: #992B41;
+}
+.guidelines{
+    display: inline;
+}
+.smooth {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type:none;
+}
+.smooth li{
+    margin-right: 20px ;
+}
+
+
+.team_body {
+    background: #e8cbc0;
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4);
+    min-height: 100vh;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-link:hover, .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
 }
