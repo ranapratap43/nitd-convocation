@@ -114,14 +114,20 @@ main {
 }
 
 .guidelines .smooth a{
-    color: #992B41;
+    color: #ffffff;
+    
+    background: #992B41;
+    padding: 8px 30px !important;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
 }
 .guidelines{
     display: inline;
 }
 .smooth {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     list-style-type:none;
 }
 .smooth li{
