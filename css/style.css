@@ -134,6 +134,15 @@ main {
     margin-right: 20px ;
 }
 
+@media only screen and (max-width: 600px) {
+    .guidelines{
+        display: none;
+    }
+    .smooth{
+        display: none;
+    }
+  }
+
 
 .team_body {
     background: #e8cbc0;
