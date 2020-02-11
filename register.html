@@ -57,7 +57,182 @@
       <h2 class="text-center primary-color font-weight-bolder">Registration Form</h2>
    </div>
    <div class="container shadow p-4 mb-4 bg-white text-left">
-    <h5 class="text-center  highlight_text font-weight-bolder mt-2">Registration starting soon. Stay Tuned</h5>
+    <form id = "contactForm">
+      <p class="text-left highlight_text">* All Fields are COMPULSORY.</p>
+      <h4 class="primary-color font-weight-bolder mt-3">Personal Details</h4>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="roll">Roll No.</label>
+          <input type="text" class="form-control" id="roll" placeholder="Roll" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="name_eng">Name (English)</label>
+          <input type="text" class="form-control" id="name_eng" placeholder=""readonly>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name_hin">Name (Hindi)</label>
+          <input type="text" class="form-control" id="name_hin" placeholder="" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="name_hin_file">Name (Hindi) Image</label>
+          <input type="file" class="form-control-file" id="name_hin_file"required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name_father"> Father's Name</label>
+          <input type="text" class="form-control" id="name_father" placeholder=""required>
+        </div>
+        <div class="form-group  col-md-6" >
+          <label for="dob"> D.O.B</label>
+          <input type="date" class="form-control" id="dob" placeholder=""required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="email"> Present Email</label>
+          <input type="email" class="form-control" id="email" placeholder="@example.com"required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="phone">Present Contact No.</label>
+          <input type="text" class="form-control" id="phone" placeholder="+91"required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="gender">Gender</label>
+          <select id="gender" class="form-control"required>
+            <option hidden disabled selected>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="nationality">Nationality</label>
+          <input type="text" class="form-control" id="nationality"required>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="department">Department</label>
+          <select id="department" class="form-control"required>
+            <option hidden disabled selected>Select</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>ME</option>
+            <option>AS</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="program">Program</label>
+          <select id="program" class="form-control"required>
+            <option hidden disabled selected>Select</option>
+            <option>B.Tech.</option>
+            <option>M.Tech.</option>
+            <option>Ph.D.</option>
+            
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="category">Category</label>
+          <select id="category" class="form-control"required>
+            <option hidden disabled selected>Select</option>
+            <option>Gen</option>
+            <option>SC</option>
+            <option>ST</option>
+            <option>OBC</option>
+            <option>PWD</option>
+          </select>
+        </div>
+      </div>
+      
+      <h4 class="primary-color font-weight-bolder mt-3">Accompanying Persons</h4>
+      <p class="text-left highlight_text">* Details of Accompanying persons should be CORRECT, and NO MODIFICATION will be further entertained.</p>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="no_accompanying">No. of Accompanying Person</label>
+          <select id="no_accompanying" class="form-control " aria-describedby="passwordHelpInline"required>
+            <option hidden disabled selected>Select</option>
+            <option>Nil</option>
+            <option>1</option>
+            <option>2</option>
+          </select>
+          <small id="passwordHelpInline" class="text-muted ">
+            Maximum 2 persons are allowed.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-row" id = "accompany1">
+        <div class="form-group col-md-6">
+          <label for="name_accompanying1">Name of Person 1</label>
+          <input type="text" class="form-control" id="name_accompanying1" >
+        </div>
+        <div class="form-group col-md-6">
+          <label for="age_accompanying1">Age of Person 1</label>
+          <input type="number" class="form-control" id="age_accompanying1" min="15" aria-describedby="passwordHelpInline1">
+          <small id="passwordHelpInline1" class="text-muted ">
+            Age greater than 14 years mandatorily.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-row" id = "accompany2">
+        <div class="form-group col-md-6">
+          <label for="name_accompanying2">Name of Person 2</label>
+          <input type="text" class="form-control" id="name_accompanying2" >
+        </div>
+        <div class="form-group col-md-6">
+          <label for="age_accompanying2">Age of Person 2</label>
+          <input type="number" class="form-control" id="age_accompanying2" min = "15" aria-describedby="passwordHelpInline1">
+          <small id="passwordHelpInline1" class="text-muted ">
+            Age greater than 14 years mandatorily.
+          </small>
+        </div>
+      </div>
+
+      <h4 class="primary-color font-weight-bolder mt-3">Payment Details</h4>
+
+      <div class="form-row" >
+        <div class="form-group col-md-6">
+          <label for="transaction_mode">Transaction Mode</label>
+          <select id="transaction_mode" class="form-control "required>
+            <option hidden disabled selected>Select</option>
+            <option>Net Banking</option>
+            <option>UPI</option>
+            
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="bank_name">Bank Name</label>
+          <input type="text" class="form-control" id="bank_name"required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="transaction_id">Transaction ID</label>
+          <input type="text" class="form-control" id="transaction_id"required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="transaction_date">Transaction Date</label>
+          <input type="date" class="form-control" id="transaction_date"required>
+        </div>
+      </div>
+        
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="alert" id = "alert"> You Have Registered Successfully.</div>
    </div>
    
   
