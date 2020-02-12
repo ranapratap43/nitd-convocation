@@ -59,7 +59,7 @@ function ValidateEmail()
 
 function loadName() {
   
- 
+  
   databaseRef.ref("eligible/").orderByChild("roll").equalTo(getInputVal('roll')).once("value",snapshot => {
     if (snapshot.exists()){
       snapshot.forEach(function(childSnapshot) {
@@ -176,7 +176,7 @@ function saveData(roll, name_eng, name_hin, dob, name_father, email, phone, gend
       snapshot.forEach(function(childSnapshot) {
         var childData = childSnapshot.val();
         if(dob == childData.dob && childData.status == "0"){
-        var newDetails = databaseRef.ref("allumni/" + roll);
+        var newDetails = databaseRef.ref("alumni/" + roll);
         var updateStatus = databaseRef.ref("eligible/" + roll);
        
        
@@ -219,6 +219,7 @@ function saveData(roll, name_eng, name_hin, dob, name_father, email, phone, gend
           updates ['/status'] = "1"; 
            updateStatus.update(updates);
            showAlert("You Have Registered Successfully");
+          
         
 
            //clear form
