@@ -51,6 +51,7 @@ function ValidateEmail()
     
     document.getElementById('emailCheck').style.display = 'block';
     document.getElementById("emailCheck").style.color = "red";
+    
   }
     
 }
@@ -216,9 +217,10 @@ function saveData(roll, name_eng, name_hin, dob, name_father, email, phone, gend
               name_hin_url: downloadURL
           });
           var updates = {};
-          updates ['/status'] = "1"; 
+           updates ['/status'] = "1"; 
            updateStatus.update(updates);
            showAlert("You Have Registered Successfully");
+           $("#myModal").modal("toggle");
           
         
 
