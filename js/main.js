@@ -20,6 +20,42 @@ var firebaseConfig = {
 
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 document.getElementById("roll").addEventListener("input", loadName);
+document.getElementById('age_accompanying1').addEventListener("change", ageAlert1);
+document.getElementById('age_accompanying2').addEventListener("change", ageAlert2);
+document.getElementById('email').addEventListener("change", ValidateEmail);
+function ageAlert1(){
+  var age1 = getInputVal('age_accompanying1');
+  if(age1 < 15){
+    document.getElementById("ageBarrier1").innerHTML = "Enter an age greater than 14 years";
+    document.getElementById("ageBarrier1").style.color = "red ";
+  }else{
+    document.getElementById("ageBarrier1").innerHTML = "";
+  }
+}
+function ageAlert2(){
+  var age2 = getInputVal('age_accompanying2');
+  if(age2 < 15){
+    document.getElementById("ageBarrier2").innerHTML = "Enter an age greater than 14 years";
+    document.getElementById("ageBarrier2").style.color = "red";
+  }else{
+    document.getElementById("ageBarrier2").innerHTML = "";
+  }
+}
+
+function ValidateEmail() 
+{
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+ if (getInputVal('email').match(mailformat)){
+  document.getElementById('emailCheck').style.display = 'none';
+  }else{
+    
+    document.getElementById('emailCheck').style.display = 'block';
+    document.getElementById("emailCheck").style.color = "red";
+  }
+    
+}
+
+
 
 function loadName() {
   
@@ -36,6 +72,10 @@ function loadName() {
       console.log("doesnot exist");
     }
 });
+
+
+
+
 var file_hin;
 }
 document.getElementById('name_hin_file').addEventListener('change', function(evt) {

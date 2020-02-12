@@ -73,11 +73,14 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="name_hin">Name (Hindi)</label>
-          <input type="text" class="form-control" id="name_hin" placeholder="" required>
+          <input type="text" class="form-control" id="name_hin" placeholder="" >
         </div>
         <div class="form-group col-md-6">
-          <label for="name_hin_file">Name (Hindi) Image</label>
-          <input type="file" class="form-control-file" id="name_hin_file"required>
+          <label for="name_hin_file">Hindi Name (.jpg, .jpeg, .png, .pdf)</label>
+          <input type="file" accept = ".png, .jpg, .pdf, .jpeg" class="form-control-file" aria-describedby="hinMsg" id="name_hin_file"required>
+          <small id="hinMsg" class="text-muted">
+           Please upload self attested(signed) 'Hindi' name of the applicant, written clearly and legible
+          </small>
         </div>
       </div>
 
@@ -95,7 +98,10 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="email"> Present Email</label>
-          <input type="email" class="form-control" id="email" placeholder="@example.com"required>
+          <input type="email" class="form-control" id="email" placeholder="@example.com" aria-describedby="emailCheck" required>
+          <small id="emailCheck" class="bottom_text">
+            Enter a valid email id
+          </small>
         </div>
         <div class="form-group col-md-6">
           <label for="phone">Present Contact No.</label>
@@ -121,7 +127,7 @@
       
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="department">Department</label>
+          <label for="department">Department <span class = "sub_label" >(During study at NIT Delhi)</span></label>
           <select id="department" class="form-control"required>
             <option hidden disabled selected>Select</option>
             <option>CSE</option>
@@ -132,7 +138,7 @@
           </select>
         </div>
         <div class="form-group col-md-4">
-          <label for="program">Program</label>
+          <label for="program">Program  <span class = "sub_label" >(During study at NIT Delhi)</span></label>
           <select id="program" class="form-control"required>
             <option hidden disabled selected>Select</option>
             <option>B.Tech.</option>
@@ -179,8 +185,8 @@
         </div>
         <div class="form-group col-md-6">
           <label for="age_accompanying1">Age of Person 1</label>
-          <input type="number" class="form-control" id="age_accompanying1" min="15" aria-describedby="passwordHelpInline1">
-          <small id="passwordHelpInline1" class="text-muted ">
+          <input type="number" class="form-control" id="age_accompanying1" min="15" aria-describedby="ageBarrier1">
+          <small id="ageBarrier1" class="bottom_text">
             Age greater than 14 years mandatorily.
           </small>
         </div>
@@ -193,15 +199,15 @@
         </div>
         <div class="form-group col-md-6">
           <label for="age_accompanying2">Age of Person 2</label>
-          <input type="number" class="form-control" id="age_accompanying2" min = "15" aria-describedby="passwordHelpInline1">
-          <small id="passwordHelpInline1" class="text-muted ">
+          <input type="number" class="form-control" id="age_accompanying2" min = "15" aria-describedby="ageBarrier2">
+          <small id="ageBarrier2" class="bottom_text">
             Age greater than 14 years mandatorily.
           </small>
         </div>
       </div>
 
       <h4 class="primary-color font-weight-bolder mt-3">Payment Details</h4>
-
+      <p class="text-left highlight_text">* Please refer the <a href="./guidelines.html#fee"><u>GUIDELINES</u></a></p>
       <div class="form-row" >
         <div class="form-group col-md-6">
           <label for="transaction_mode">Transaction Mode</label>
@@ -231,6 +237,7 @@
         
 
       <button type="submit" class="btn btn-primary">Submit</button>
+      <p class="text-left highlight_text">* For any further query/ clarification, please drop an email to convocation@nitdelhi.ac.in with specifying your NIT Delhi roll number correctly.</p>
     </form>
     <div class="alert" id = "alert"> You Have Registered Successfully.</div>
    </div>

@@ -227,3 +227,10 @@ main {
 	border:solid 1px #4a4a4a;
 }
 
+.bottom_text{
+    color: #6c757d;
+}
+
+.sub_label{
+    font-size: small;
+}
